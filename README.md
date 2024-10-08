@@ -12,10 +12,12 @@ This repository contains the implementation of a control system for a **Rotary I
 - **Mathematical Modeling**: The pendulum dynamics are modeled using the Lagrangian method, accounting for kinetic and potential energy balances. The system is represented in state-space form to facilitate control design. 
 
     $$
-        \left\{ \begin{array}{l}
-            \ddot{\theta}=\dfrac{m^2l^2rg}{\lambda}\alpha-\dfrac{K_m K_e (J+ml^2)}{\lambda R}\dot{\theta}+\dfrac{K_m (J+ml^2)}{\lambda R} u_a \\[0.5cm] 
+    \begin{equation}
+         \begin{array}{l}
+            \ddot{\theta}=\dfrac{m^2l^2rg}{\lambda}\alpha-\dfrac{K_m K_e (J+ml^2)}{\lambda R}\dot{\theta}+\dfrac{K_m (J+ml^2)}{\lambda R} u_a \\
             \ddot{\alpha}=\dfrac{mgl(I+mr^2)}{\lambda}\alpha+\dfrac{mrlK_m K_e}{\lambda R} u_a
-        \end{array} \right.
+        \end{array} 
+    \end{equation}
     $$
 
     $$ \lambda= (IJ+Iml^2+Jmr^2) $$
